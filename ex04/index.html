@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt e Alert</title>
+</head>
+<body>
+    <h1>Saudação</h1>
+    <button id="saudar">Qual seu nome?</button>
+
+    <script>
+        document.getElementById('saudar').addEventListener('click', ()=> {
+            const nome = prompt('Qual seu nome:');
+
+            if(!nome || !nome.trim()) {
+                alert('Você não informou um nome.')
+            } else {
+                alert(`Olá, ${nome.trim()}`)
+            }
+        })
+    </script>
+</body>
+</html>
