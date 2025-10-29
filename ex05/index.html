@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudar cor</title>
+</head>
+<body>
+    <h1 id="titulo">Título</h1>
+    <button id="estilo">Mudar cor</button>
+
+    <script>
+        document.getElementById('estilo').addEventListener('click', ()=> {
+            const titulo = document.getElementById('titulo');
+            // corpo.style.backgroundColor = "blue"; - precisa colocar um ID no body para funcionar assim.
+            titulo.style.color = "#d21";
+            titulo.style.backgroundColor = "#f11";
+            titulo.style.fontSize = '48px';
+            titulo.textContent = 'Titulo modificado!';
+        });
+    </script>
+</body>
+</html>
