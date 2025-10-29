@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma</title>
+</head>
+<body>
+    <h1>Soma</h1>
+    <input type="number" name="" id="numero1" placeholder="Primeiro número">
+    <input type="number" name="" id="numero2" placeholder="Segundo número">
+
+    <button id="soma">Somar</button>
+    <p id="result">-</p>
+
+    <script>
+        document.getElementById('soma'). addEventListener('click', ()=> {
+            const primeiro = Number(document.getElementById('numero1').value)
+            const segundo = Number(document.getElementById('numero2').value)
+            // para verificar se tem números nos dois campos: Usar isFinite dentro do if
+            document.getElementById('result').textContent = `O resultado é ${(primeiro + segundo).toFixed(2)}` 
+        })
+    </script>
+</body>
+</html>
