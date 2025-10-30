@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de faixa etária</title>
+</head>
+<body>
+    <h1>Verificador de Idade</h1>
+    <input type="number" name="" id="idade">
+    <button id="ver">Verificar</button>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById('ver').addEventListener('click', ()=> {
+            const i = Number(document.getElementById('idade').value, 10);
+            const saida = document.getElementById('result');
+            saida.textContent = (i >= 18) ? 'Permitido' : 'Proibido';
+        });
+    </script>
+</body>
+</html>
