@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra Papel Tesoura</title>
+</head>
+<body>
+    <h1>Pedra Papel Tesoura</h1>
+    <button class="escolha" data-move="pedra">Pedra</button>
+    <button class="escolha" data-move="papel">Papel</button>
+    <button class="escolha" data-move="tesoura">Tesoura</button>
+    <p id="res"></p>
+
+    <script>
+        const movimentos = ['pedra', 'papel', 'tesoura'];
+        document.querySelectorAll('.escolha').forEach(btn => {
+            btn.addEventListener('click', ()=> {
+                const jogador = btn.dataset.move;
+                const computador = movimentos[Math.floor(Math.random() * movimentos.length)];
+                let result;
+                if(jogador === computador) result = 'Empate';
+                else if((jogador === 'pedra' && computador === 'tesoura') || (jogador === 'papel' && computador === 'pedra') || (jogador === 'tesoura' && computador === 'papel')) result = 'Você venceu';
+                else result = 'Computador venceu';
+                document.getElementById('res').textContent = `Você: ${jogador} - PC: ${computador} -> ${result}`
+            })
+        })
+    </script>
+</body>
+</html>
