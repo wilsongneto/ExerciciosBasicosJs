@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor C-F</title>
+</head>
+<body>
+    <h1>Conversor °C -> °F</h1>
+    <input type="number" name="" id="celsius" step="0.01" placeholder="Insira o valor em °C">
+    <button id="convert">Converter</button>
+    <p id="saida"></p>
+
+    <script>
+        function celsiusToFahr(celsius) {
+            return (celsius * 9/5) + 32;
+        }
+        document.getElementById('convert').addEventListener('click', ()=> {
+            const celsius = Number(document.getElementById('celsius').value);
+            const fahr = celsiusToFahr(celsius);
+            document.getElementById('saida').textContent = `${celsius.toFixed(1)} °C = ${fahr.toFixed(1)} °F`;
+        })
+    </script>
+</body>
+</html>
